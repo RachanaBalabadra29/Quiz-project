@@ -1,0 +1,51 @@
+<DOCTYPE html>
+    <html>
+     <head>
+       <title>Quiz application</title>
+     </head>
+     <body onload="loadcontent()">
+       <FORM action = "question9.html"  onsubmit="save()">
+        What's the difference between events and event listeners?<BR>
+           <INPUT TYPE="RADIO" id="1" VALUE="A" NAME="cc">
+           A. It just depends on how you write them<BR>
+           <INPUT TYPE="RADIO" id="2" VALUE="B" NAME="cc">
+           B. The syntax is different<BR>
+           <INPUT TYPE="RADIO"  id="3" VALUE="C" NAME="cc">
+           C. There isn't really much of a difference<BR>
+            <INPUT TYPE="RADIO" id="4" VALUE="D" NAME="cc">
+           D.Don’t know<BR>
+           <INPUT TYPE="SUBMIT" NAME="Submit ">
+       </FORM>
+         
+       <script>
+         var ans="Another name for Java";
+       function loadcontent(){
+               localStorage.setItem("question8",ans)
+           }
+   
+       function save()
+       
+           {
+               var score=0;
+               var togetele = document.getElementsByName("cc"); 
+   
+               for(var i=0;i<togetele.length;i++){
+                   var opt=togetele[i].value;
+                  
+                   if(togetele[i].checked){
+                       givenans=togetele[i].value;
+                       console.log(togetele[i].value)
+                       if(ans==givenans){
+                        
+                           score++;
+                           score=score.toString();
+                           localStorage.setItem("score",score)
+   
+               }
+   
+                   }
+               }
+           }
+       </script>
+     </body>
+    </html>

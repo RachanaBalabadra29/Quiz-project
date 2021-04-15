@@ -1,0 +1,51 @@
+<DOCTYPE html>
+    <html>
+     <head>
+       <title>Quiz application</title>
+     </head>
+     <body onload="loadcontent()">
+       <FORM action = "question6.html"  onsubmit="save()">
+        Which of the following is not a benefit of bootstrap?<BR>
+           <INPUT TYPE="RADIO" id="1" VALUE="A" NAME="cc">
+           A. Complexity<BR>
+           <INPUT TYPE="RADIO" id="2" VALUE="B" NAME="cc">
+           B. Browser compatibility<BR>
+           <INPUT TYPE="RADIO"  id="3" VALUE="C" NAME="cc">
+           C. Responsive features<BR>
+            <INPUT TYPE="RADIO" id="4" VALUE="D" NAME="cc">
+           D.Mobile-first approach<BR>
+           <INPUT TYPE="SUBMIT" NAME="Submit ">
+       </FORM>
+         
+       <script>
+         var ans="Another name for Java";
+       function loadcontent(){
+               localStorage.setItem("question5",ans)
+           }
+   
+       function save()
+       
+           {
+               var score=0;
+               var togetele = document.getElementsByName("cc"); 
+   
+               for(var i=0;i<togetele.length;i++){
+                   var opt=togetele[i].value;
+                   
+                   if(togetele[i].checked){
+                       givenans=togetele[i].value;
+                       console.log(togetele[i].value)
+                       if(ans==givenans){
+                           
+                           score++;
+                           score=score.toString();
+                           localStorage.setItem("score",score)
+   
+               }
+   
+                   }
+               }
+           }
+       </script>
+     </body>
+    </html>

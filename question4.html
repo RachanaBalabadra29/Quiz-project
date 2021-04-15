@@ -1,0 +1,50 @@
+<DOCTYPE html>
+    <html>
+     <head>
+       <title>Quiz application</title>
+     </head>
+     <body onload="loadcontent()">
+       <FORM action = "question5.html"  onsubmit="save()">
+        What is the main plus point of using Bootstrap ?<BR>
+           <INPUT TYPE="RADIO" id="1" VALUE="A" NAME="cc">
+           A. Browser compatibility<BR>
+           <INPUT TYPE="RADIO" id="2" VALUE="B" NAME="cc">
+           B. Mobile-first approach<BR>
+           <INPUT TYPE="RADIO"  id="3" VALUE="C" NAME="cc">
+           C. Responsive features<BR>
+            <INPUT TYPE="RADIO" id="4" VALUE="D" NAME="cc">
+           D.All of the above<BR>
+           <INPUT TYPE="SUBMIT" NAME="Submit ">
+       </FORM>
+         
+       <script>
+         var ans="Another name for Java";
+       function loadcontent(){
+               localStorage.setItem("question4",ans)
+           }
+   
+       function save()
+       
+           {
+               var score=0;
+               var togetele = document.getElementsByName("cc"); 
+               for(var i=0;i<togetele.length;i++){
+                   var opt=togetele[i].value;
+                   
+                   if(togetele[i].checked){
+                       givenans=togetele[i].value;
+                       console.log(togetele[i].value)
+                       if(ans==givenans){
+                          
+                           score++;
+                           score=score.toString();
+                           localStorage.setItem("score",score)
+   
+               }
+   
+                   }
+               }
+           }
+       </script>
+     </body>
+    </html>

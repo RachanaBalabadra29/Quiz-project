@@ -1,0 +1,48 @@
+<DOCTYPE html>
+    <html>
+     <head>
+       <title>Quiz application</title>
+     </head>
+     <body onload="loadcontent()">
+       <FORM action = "question3.html"  onsubmit="save()">
+        HTML program can be read and rendered by<BR>
+           <INPUT TYPE="RADIO" id="1" VALUE="A" NAME="cc">
+           A. Compiler<BR>
+           <INPUT TYPE="RADIO" id="2" VALUE="B" NAME="cc">
+           B. Server<BR>
+           <INPUT TYPE="RADIO"  id="3" VALUE="C" NAME="cc">
+           C. Web browser<BR>
+            <INPUT TYPE="RADIO" id="4" VALUE="D" NAME="cc">
+           D.Interpreter<BR>
+           <INPUT TYPE="SUBMIT" NAME="Submit ">
+       </FORM>
+         
+       <script>
+         var ans="Another name for Java";
+       function loadcontent(){
+               localStorage.setItem("question2",ans)
+           }
+   
+       function save()
+       
+           {
+               var score=0;
+               var togetele = document.getElementsByName("cc"); 
+               for(var i=0;i<togetele.length;i++){
+                   var opt=togetele[i].value;
+                   if(togetele[i].checked){
+                       givenans=togetele[i].value;
+                       console.log(togetele[i].value)
+                       if(ans==givenans){
+                           score++;
+                           score=score.toString();
+                           localStorage.setItem("score",score)
+   
+               }
+   
+                   }
+               }
+           }
+       </script>
+     </body>
+    </html>
