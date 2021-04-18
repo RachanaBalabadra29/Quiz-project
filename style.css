@@ -5,12 +5,7 @@ body{
     background-size: cover;
     position: relative;
 }
-#for{
-    padding:50px
-}
-#tab{
-    color:white;
-}
+
 
 
 a {
@@ -33,8 +28,5 @@ a {
     background-color: #4CAF50;
     color: white;
   }
-  
-  .round {
-    border-radius: 50%;
-  }
-  
+
+

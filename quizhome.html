@@ -15,28 +15,17 @@
         <!-- reference: I took help from internet  -->
   <head>
     <title>Quiz application</title>
-    
-    <script>
-       
-function save(){
-    const n = document.getElementById("fname");
-console.log(n.value);
-    var ans="";
-    localStorage.setItem("name",n.value);
-    
-  
-}
-    </script>
+
     <link rel="stylesheet" href="style.css">
   </head>
 <body>
 <h1>Welcome to quiz</h1>
 <h2>Fill this form</h1>
-<form action="question1.html"    onsubmit="save()">
-  <label for="fname">First name:</label>
+<form action="question1.html">
+  <label for="fname"> Name:</label>
   <input   type="text" id="fname" name="fname"><br><br>
-  <label for="lname">Last name:</label>
-  <input  type="text" id="lname" name="lname"><br><br>
+  <label for="lname">Course:</label>
+  <input  type="text" id="cname" name="cname"><br><br>
   <label for="fname">Roll no:</label>
   <input   type="text" id="fname" name="fname"><br><br>
   <input  type="submit" value="Submit">
